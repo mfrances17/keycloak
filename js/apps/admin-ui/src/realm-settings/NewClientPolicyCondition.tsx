@@ -192,7 +192,7 @@ export default function NewClientPolicyCondition() {
         }
         divider
       />
-      <PageSection variant="light">
+      <PageSection>
         <FormAccess
           isHorizontal
           role="manage-realm"

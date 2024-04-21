@@ -112,7 +112,7 @@ export default function ScopeDetails() {
             : undefined
         }
       />
-      <PageSection variant="light">
+      <PageSection>
         <FormProvider {...form}>
           <FormAccess
             isHorizontal

@@ -127,7 +127,7 @@ const KeySection = ({
         </FormAccess>
       </FormPanel>
       {keyInfo?.certificate && section === "true" && (
-        <Card isFlat>
+        <Card>
           <CardBody className="kc-form-panel__body">
             <Form isHorizontal>
               <Certificate keyInfo={keyInfo} />
@@ -225,7 +225,7 @@ export const SamlKeys = ({ clientId, save }: SamlKeysProps) => {
   });
 
   return (
-    <PageSection variant="light" className="keycloak__form">
+    <PageSection className="keycloak__form">
       {isChanged && (
         <SamlKeysDialog
           id={clientId}

@@ -1,10 +1,5 @@
-import {
-  Button,
-  Chip,
-  FormGroup,
-  Split,
-  SplitItem,
-} from "@patternfly/react-core";
+import { Button, FormGroup, Split, SplitItem } from "@patternfly/react-core";
+import { Chip } from "@patternfly/react-core/deprecated";
 import { Controller, useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 

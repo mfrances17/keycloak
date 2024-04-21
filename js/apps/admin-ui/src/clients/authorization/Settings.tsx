@@ -83,7 +83,7 @@ export const AuthorizationSettings = ({ clientId }: { clientId: string }) => {
   }
 
   return (
-    <PageSection variant="light">
+    <PageSection>
       {importDialog && (
         <ImportDialog
           onConfirm={importResource}

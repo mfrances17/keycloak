@@ -179,7 +179,7 @@ export default function ResourceDetails() {
             : undefined
         }
       />
-      <PageSection variant="light">
+      <PageSection>
         <FormProvider {...form}>
           <FormAccess
             isHorizontal

@@ -109,7 +109,7 @@ export default function AttributesGroupForm() {
         titleKey={matchingGroup ? "editGroupText" : "createGroupText"}
         divider
       />
-      <PageSection variant="light" onSubmit={form.handleSubmit(onSubmit)}>
+      <PageSection onSubmit={form.handleSubmit(onSubmit)}>
         <FormAccess isHorizontal role="manage-realm">
           <FormProvider {...form}>
             <TextControl

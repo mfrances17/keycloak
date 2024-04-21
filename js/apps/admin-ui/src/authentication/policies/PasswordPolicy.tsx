@@ -128,7 +128,7 @@ export const PasswordPolicy = ({
   };
 
   return (
-    <PageSection variant="light" className="pf-v5-u-p-0">
+    <PageSection className="pf-v5-u-p-0">
       {(rows.length !== 0 || realm.passwordPolicy) && (
         <>
           <Toolbar>
@@ -139,7 +139,7 @@ export const PasswordPolicy = ({
             </ToolbarContent>
           </Toolbar>
           <Divider />
-          <PageSection variant="light">
+          <PageSection>
             <FormProvider {...form}>
               <FormAccess
                 className="keycloak__policies_authentication__form"
@@ -180,12 +180,13 @@ export const PasswordPolicy = ({
         </>
       )}
       {!rows.length && !realm.passwordPolicy && (
-        <EmptyState data-testid="empty-state" variant="lg">
-          <EmptyStateHeader
-            titleText={<>{t("noPasswordPolicies")}</>}
-            icon={<EmptyStateIcon icon={PlusCircleIcon} />}
-            headingLevel="h1"
-          />
+        <EmptyState
+          headingLevel="h1"
+          icon={PlusCircleIcon}
+          titleText={<>{t("noPasswordPolicies")}</>}
+          data-testid="empty-state"
+          variant="lg"
+        >
           <EmptyStateBody>{t("noPasswordPoliciesInstructions")}</EmptyStateBody>
           <EmptyStateFooter>
             <EmptyStateActions>

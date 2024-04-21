@@ -234,7 +234,7 @@ export default function EditClientScope() {
         divider={false}
       />
 
-      <PageSection variant="light" className="pf-v5-u-p-0">
+      <PageSection className="pf-v5-u-p-0">
         <RoutableTabs isBox>
           <Tab
             id="settings"
@@ -242,7 +242,7 @@ export default function EditClientScope() {
             title={<TabTitleText>{t("settings")}</TabTitleText>}
             {...settingsTab}
           >
-            <PageSection variant="light">
+            <PageSection>
               <ScopeForm save={onSubmit} clientScope={clientScope} />
             </PageSection>
           </Tab>

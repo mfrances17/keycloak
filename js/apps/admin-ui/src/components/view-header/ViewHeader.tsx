@@ -89,7 +89,7 @@ export const ViewHeader = ({
 
   return (
     <>
-      <PageSection variant="light">
+      <PageSection>
         <Level hasGutter>
           <LevelItem>
             <Level>

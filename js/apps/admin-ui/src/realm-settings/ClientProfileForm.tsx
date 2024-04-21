@@ -219,7 +219,7 @@ export default function ClientProfileForm() {
             : undefined
         }
       />
-      <PageSection variant="light">
+      <PageSection>
         <FormProvider {...form}>
           <FormAccess isHorizontal role="view-realm" className="pf-v5-u-mt-lg">
             <TextControl

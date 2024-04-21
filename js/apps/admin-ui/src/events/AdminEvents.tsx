@@ -3,8 +3,6 @@ import { CodeEditor, Language } from "@patternfly/react-code-editor";
 import {
   ActionGroup,
   Button,
-  Chip,
-  ChipGroup,
   DatePicker,
   Flex,
   FlexItem,
@@ -17,6 +15,8 @@ import {
   Select,
   SelectOption,
   SelectVariant,
+  Chip,
+  ChipGroup,
 } from "@patternfly/react-core/deprecated";
 import { TableVariant, cellWidth } from "@patternfly/react-table";
 import {

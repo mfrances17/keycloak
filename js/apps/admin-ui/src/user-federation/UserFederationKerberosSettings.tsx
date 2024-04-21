@@ -76,10 +76,10 @@ export default function UserFederationKerberosSettings() {
       <FormProvider {...form}>
         <Header provider="Kerberos" save={() => form.handleSubmit(save)()} />
       </FormProvider>
-      <PageSection variant="light">
+      <PageSection>
         <KerberosSettingsRequired form={form} showSectionHeading />
       </PageSection>
-      <PageSection variant="light" isFilled>
+      <PageSection isFilled>
         <SettingsCache form={form} showSectionHeading />
         <Form onSubmit={form.handleSubmit(save)}>
           <ActionGroup>

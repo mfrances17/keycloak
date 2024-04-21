@@ -156,7 +156,7 @@ export default function ExecutorForm() {
         titleKey={editMode ? executorName : t("addExecutor")}
         divider
       />
-      <PageSection variant="light">
+      <PageSection>
         <FormAccess
           isHorizontal
           role="manage-realm"

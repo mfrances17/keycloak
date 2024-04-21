@@ -337,7 +337,7 @@ export default function RealmRoleTabs() {
         dropdownItems={dropdownItems}
         divider={false}
       />
-      <PageSection variant="light" className="pf-v5-u-p-0">
+      <PageSection className="pf-v5-u-p-0">
         <FormProvider {...form}>
           <RoutableTabs isBox mountOnEnter defaultLocation={toTab("details")}>
             <Tab

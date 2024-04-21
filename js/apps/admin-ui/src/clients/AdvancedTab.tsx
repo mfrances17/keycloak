@@ -70,7 +70,7 @@ export const AdvancedTab = ({ save, client }: AdvancedProps) => {
   };
 
   return (
-    <PageSection variant="light" className="pf-v5-u-py-0">
+    <PageSection className="pf-v5-u-py-0">
       <ScrollForm
         label={t("jumpToSection")}
         sections={[

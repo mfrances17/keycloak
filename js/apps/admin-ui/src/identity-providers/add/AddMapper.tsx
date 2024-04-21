@@ -164,7 +164,7 @@ export default function AddMapper() {
   }
 
   return (
-    <PageSection variant="light">
+    <PageSection>
       <DeleteMapperConfirm />
       <ViewHeader
         className="kc-add-mapper-title"

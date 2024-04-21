@@ -141,7 +141,7 @@ export const Credentials = ({ client, save, refresh }: CredentialsProps) => {
       >
         <ClientSecretConfirm />
         <AccessTokenConfirm />
-        <Card isFlat>
+        <Card>
           <CardBody>
             <SelectControl
               name="clientAuthenticatorType"
@@ -184,7 +184,7 @@ export const Credentials = ({ client, save, refresh }: CredentialsProps) => {
             </>
           )}
         </Card>
-        <Card isFlat>
+        <Card>
           <CardBody>
             <FormGroup
               label={t("registrationAccessToken")}

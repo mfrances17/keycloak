@@ -96,7 +96,7 @@ export default function NewClientForm() {
   return (
     <>
       <ViewHeader titleKey="createClient" subKey="clientsExplain" />
-      <PageSection variant="light">
+      <PageSection>
         <FormProvider {...form}>
           <Wizard
             onClose={() => navigate(toClients({ realm }))}

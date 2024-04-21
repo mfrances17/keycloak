@@ -29,7 +29,7 @@ export const ProviderInfo = () => {
   };
 
   return (
-    <PageSection variant="light">
+    <PageSection>
       <TableToolbar
         inputGroupName="search"
         inputGroupPlaceholder={t("search")}

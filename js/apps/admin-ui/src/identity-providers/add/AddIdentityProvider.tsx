@@ -83,7 +83,7 @@ export default function AddIdentityProvider() {
           provider: toUpperCase(providerId),
         })}
       />
-      <PageSection variant="light">
+      <PageSection>
         <FormAccess
           role="manage-identity-providers"
           isHorizontal

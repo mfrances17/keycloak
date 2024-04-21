@@ -356,7 +356,7 @@ export default function FlowDetails() {
         ]}
         dropdownItems={dropdownItems}
       />
-      <PageSection variant="light">
+      <PageSection>
         {executionList && hasExecutions && (
           <>
             <Toolbar id="toolbar">

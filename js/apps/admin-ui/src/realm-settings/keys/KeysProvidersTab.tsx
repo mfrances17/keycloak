@@ -157,7 +157,7 @@ export const KeysProvidersTab = ({
         />
       )}
       <DeleteConfirm />
-      <PageSection variant="light" padding={{ default: "noPadding" }}>
+      <PageSection padding={{ default: "noPadding" }}>
         <Toolbar>
           <ToolbarGroup className="providers-toolbar">
             <ToolbarItem>

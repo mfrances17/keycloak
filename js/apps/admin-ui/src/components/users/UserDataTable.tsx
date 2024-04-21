@@ -6,8 +6,6 @@ import {
   AlertVariant,
   Button,
   ButtonVariant,
-  Chip,
-  ChipGroup,
   EmptyState,
   FlexItem,
   Label,
@@ -18,6 +16,7 @@ import {
   ToolbarItem,
   Tooltip,
 } from "@patternfly/react-core";
+import { Chip, ChipGroup } from "@patternfly/react-core/deprecated";
 import {
   ExclamationCircleIcon,
   InfoCircleIcon,

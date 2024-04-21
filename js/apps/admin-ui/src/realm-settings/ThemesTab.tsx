@@ -44,7 +44,7 @@ export const RealmSettingsThemesTab = ({
   useEffect(setupForm, []);
 
   return (
-    <PageSection variant="light">
+    <PageSection>
       <FormAccess
         isHorizontal
         role="manage-realm"

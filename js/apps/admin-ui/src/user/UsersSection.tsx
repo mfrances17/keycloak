@@ -44,11 +44,7 @@ export default function UsersSection() {
         helpUrl={helpUrls.usersUrl}
         divider={false}
       />
-      <PageSection
-        data-testid="users-page"
-        variant="light"
-        className="pf-v5-u-p-0"
-      >
+      <PageSection data-testid="users-page" className="pf-v5-u-p-0">
         <RoutableTabs
           data-testid="user-tabs"
           defaultLocation={toUsers({

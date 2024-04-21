@@ -301,7 +301,7 @@ export default function EditUser() {
         isEnabled={user.enabled}
       />
 
-      <PageSection variant="light" className="pf-v5-u-p-0">
+      <PageSection className="pf-v5-u-p-0">
         <UserProfileProvider>
           <FormProvider {...form}>
             <RoutableTabs
@@ -314,7 +314,7 @@ export default function EditUser() {
                 title={<TabTitleText>{t("details")}</TabTitleText>}
                 {...settingsTab}
               >
-                <PageSection variant="light">
+                <PageSection>
                   <UserForm
                     form={form}
                     realm={realm}

@@ -432,7 +432,7 @@ export default function NewAttributeSettings() {
         titleKey={editMode ? attributeName : t("createAttribute")}
         subKey={editMode ? "" : t("createAttributeSubTitle")}
       />
-      <PageSection variant="light">
+      <PageSection>
         <CreateAttributeFormContent
           save={() => form.handleSubmit(save)()}
           onHandlingTranslationsData={setTranslationsData}

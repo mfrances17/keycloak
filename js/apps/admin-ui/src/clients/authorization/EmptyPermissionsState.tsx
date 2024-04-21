@@ -82,12 +82,13 @@ export const EmptyPermissionsState = ({
 }: EmptyPermissionsStateProps) => {
   const { t } = useTranslation();
   return (
-    <EmptyState data-testid="empty-state" variant="lg">
-      <EmptyStateHeader
-        titleText={<>{t("emptyPermissions")}</>}
-        icon={<EmptyStateIcon icon={PlusCircleIcon} />}
-        headingLevel="h1"
-      />
+    <EmptyState
+      headingLevel="h1"
+      icon={PlusCircleIcon}
+      titleText={<>{t("emptyPermissions")}</>}
+      data-testid="empty-state"
+      variant="lg"
+    >
       <EmptyStateBody>{t("emptyPermissionInstructions")}</EmptyStateBody>
       <EmptyStateFooter>
         <TooltipEmptyButton

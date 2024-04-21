@@ -44,7 +44,7 @@ export const UsersInRoleTab = () => {
   const { enabled } = useHelp();
 
   return (
-    <PageSection data-testid="users-page" variant="light">
+    <PageSection data-testid="users-page">
       <KeycloakDataTable
         isPaginated
         loader={loader}

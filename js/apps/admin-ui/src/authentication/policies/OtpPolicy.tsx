@@ -4,12 +4,11 @@ import {
   AlertVariant,
   Button,
   ButtonVariant,
-  Chip,
-  ChipGroup,
   FormGroup,
   PageSection,
   Radio,
 } from "@patternfly/react-core";
+import { Chip, ChipGroup } from "@patternfly/react-core/deprecated";
 import { useEffect, useMemo } from "react";
 import { Controller, FormProvider, useForm, useWatch } from "react-hook-form";
 import { useTranslation } from "react-i18next";
@@ -88,7 +87,7 @@ export const OtpPolicy = ({ realm, realmUpdated }: OtpPolicyProps) => {
   };
 
   return (
-    <PageSection variant="light">
+    <PageSection>
       <FormAccess
         role="manage-realm"
         isHorizontal

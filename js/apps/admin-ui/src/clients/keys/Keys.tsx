@@ -108,7 +108,7 @@ export const Keys = ({ clientId, save, hasConfigureAccess }: KeysProps) => {
   };
 
   return (
-    <PageSection variant="light" className="keycloak__form">
+    <PageSection className="keycloak__form">
       {openGenerateKeys && (
         <GenerateKeyDialog
           clientId={getValues("clientId")!}
@@ -119,7 +119,7 @@ export const Keys = ({ clientId, save, hasConfigureAccess }: KeysProps) => {
       {openImportKeys && (
         <ImportKeyDialog toggleDialog={toggleOpenImportKeys} save={importKey} />
       )}
-      <Card isFlat>
+      <Card>
         <CardHeader>
           <CardTitle>{t("jwksUrlConfig")}</CardTitle>
         </CardHeader>

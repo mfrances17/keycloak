@@ -10,11 +10,7 @@ type FlowTitleProps = {
 
 export const FlowTitle = ({ id, title, alias }: FlowTitleProps) => {
   return (
-    <Card
-      data-testid={title}
-      className="keycloak__authentication__title"
-      isFlat
-    >
+    <Card data-testid={title} className="keycloak__authentication__title">
       <CardBody data-id={id} id={`title-id-${id}`}>
         {title} <br />
         <Text component={TextVariants.small}>{alias}</Text>

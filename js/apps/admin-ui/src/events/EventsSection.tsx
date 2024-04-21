@@ -4,8 +4,6 @@ import type { RealmEventsConfigRepresentation } from "@keycloak/keycloak-admin-c
 import {
   ActionGroup,
   Button,
-  Chip,
-  ChipGroup,
   DatePicker,
   DescriptionList,
   DescriptionListDescription,
@@ -24,6 +22,8 @@ import {
   Select,
   SelectOption,
   SelectVariant,
+  Chip,
+  ChipGroup,
 } from "@patternfly/react-core/deprecated";
 import { CheckCircleIcon, WarningTriangleIcon } from "@patternfly/react-icons";
 import { cellWidth, expandable } from "@patternfly/react-table";
@@ -435,7 +435,7 @@ export default function EventsSection() {
         helpUrl={helpUrls.eventsUrl}
         divider={false}
       />
-      <PageSection variant="light" className="pf-v5-u-p-0">
+      <PageSection className="pf-v5-u-p-0">
         <RoutableTabs
           isBox
           defaultLocation={toEvents({ realm, tab: "user-events" })}

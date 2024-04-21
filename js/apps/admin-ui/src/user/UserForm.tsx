@@ -6,14 +6,13 @@ import {
   ActionGroup,
   AlertVariant,
   Button,
-  Chip,
-  ChipGroup,
   FormGroup,
   InputGroup,
   InputGroupItem,
   Switch,
   TextInput,
 } from "@patternfly/react-core";
+import { Chip, ChipGroup } from "@patternfly/react-core/deprecated";
 import { TFunction } from "i18next";
 import { useEffect, useState } from "react";
 import { Controller, FormProvider, UseFormReturn } from "react-hook-form";

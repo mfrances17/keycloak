@@ -463,7 +463,7 @@ export default function NewClientPolicy() {
           </>
         )}
       />
-      <PageSection variant="light">
+      <PageSection>
         <FormAccess
           onSubmit={handleSubmit(save)}
           isHorizontal

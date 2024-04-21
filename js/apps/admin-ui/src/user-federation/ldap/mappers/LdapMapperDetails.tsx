@@ -206,7 +206,7 @@ export default function LdapMapperDetails() {
               ]
         }
       />
-      <PageSection variant="light" isFilled>
+      <PageSection isFilled>
         <FormProvider {...form}>
           <FormAccess
             role="manage-realm"

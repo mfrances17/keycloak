@@ -131,7 +131,7 @@ export default function DetailProvider() {
         }
       />
       <DeleteConfirm />
-      <PageSection variant="light">
+      <PageSection>
         <FormProvider {...form}>
           <FormAccess
             role="manage-clients"

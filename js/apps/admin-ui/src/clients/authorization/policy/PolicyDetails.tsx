@@ -194,7 +194,7 @@ export default function PolicyDetails() {
             : undefined
         }
       />
-      <PageSection variant="light">
+      <PageSection>
         <FormAccess
           isHorizontal
           onSubmit={handleSubmit(onSubmit)}

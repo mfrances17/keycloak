@@ -84,7 +84,7 @@ export const RealmSettingsTokensTab = ({
   }, []);
 
   return (
-    <PageSection variant="light">
+    <PageSection>
       <FormPanel title={t("general")} className="kc-sso-session-template">
         <FormAccess
           isHorizontal

@@ -71,7 +71,7 @@ export default function AddOpenIdConnect() {
           isKeycloak ? "addKeycloakOpenIdProvider" : "addOpenIdProvider",
         )}
       />
-      <PageSection variant="light">
+      <PageSection>
         <FormProvider {...form}>
           <FormAccess
             role="manage-identity-providers"

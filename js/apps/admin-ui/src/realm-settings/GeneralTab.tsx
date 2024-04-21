@@ -132,7 +132,7 @@ function RealmSettingsGeneralTabForm({
   });
 
   return (
-    <PageSection variant="light">
+    <PageSection>
       <FormProvider {...form}>
         <FormAccess
           isHorizontal

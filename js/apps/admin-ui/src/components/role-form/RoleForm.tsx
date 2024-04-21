@@ -33,7 +33,7 @@ export const RoleForm = ({
   return (
     <>
       {!editMode && <ViewHeader titleKey={t("createRole")} />}
-      <PageSection variant="light">
+      <PageSection>
         <FormAccess
           isHorizontal
           onSubmit={handleSubmit(onSubmit)}

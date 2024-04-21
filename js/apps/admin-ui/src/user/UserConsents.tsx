@@ -1,10 +1,6 @@
 import type UserConsentRepresentation from "@keycloak/keycloak-admin-client/lib/defs/userConsentRepresentation";
-import {
-  AlertVariant,
-  ButtonVariant,
-  Chip,
-  ChipGroup,
-} from "@patternfly/react-core";
+import { AlertVariant, ButtonVariant } from "@patternfly/react-core";
+import { Chip, ChipGroup } from "@patternfly/react-core/deprecated";
 import { CubesIcon } from "@patternfly/react-icons";
 import { cellWidth } from "@patternfly/react-table";
 import { sortBy } from "lodash-es";

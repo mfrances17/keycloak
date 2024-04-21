@@ -1,12 +1,11 @@
 import GroupRepresentation from "@keycloak/keycloak-admin-client/lib/defs/groupRepresentation";
 import {
   Button,
-  Chip,
-  ChipGroup,
   FormGroup,
   InputGroup,
   InputGroupItem,
 } from "@patternfly/react-core";
+import { Chip, ChipGroup } from "@patternfly/react-core/deprecated";
 import { useState } from "react";
 import { Controller, useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";

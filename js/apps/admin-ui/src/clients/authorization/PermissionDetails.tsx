@@ -207,7 +207,7 @@ export default function PermissionDetails() {
             : undefined
         }
       />
-      <PageSection variant="light">
+      <PageSection>
         <FormAccess
           isHorizontal
           role="manage-authorization"

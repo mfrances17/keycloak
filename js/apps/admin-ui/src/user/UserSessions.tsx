@@ -15,7 +15,7 @@ export const UserSessions = () => {
   const loader = () => adminClient.users.listSessions({ id, realm });
 
   return (
-    <PageSection variant="light" className="pf-v5-u-p-0">
+    <PageSection className="pf-v5-u-p-0">
       <SessionsTable
         loader={loader}
         hiddenColumns={["username", "type"]}

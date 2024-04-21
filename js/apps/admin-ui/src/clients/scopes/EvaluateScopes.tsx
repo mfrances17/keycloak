@@ -228,7 +228,7 @@ export const EvaluateScopes = ({ clientId, protocol }: EvaluateScopesProps) => {
 
   return (
     <>
-      <PageSection variant="light">
+      <PageSection>
         {enabled && (
           <TextContent className="keycloak__section_intro__help">
             <Text>

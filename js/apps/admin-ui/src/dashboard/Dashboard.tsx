@@ -61,8 +61,8 @@ const EmptyDashboard = () => {
   const realmDisplayInfo = label(t, realmInfo?.displayName, realm);
 
   return (
-    <PageSection variant="light">
-      <EmptyState variant="lg">
+    <PageSection>
+      <EmptyState headingLevel="h1">
         <Brand
           src={environment.resourceUrl + brandImage}
           alt="Keycloak icon"
@@ -142,12 +142,12 @@ const Dashboard = () => {
 
   return (
     <>
-      <PageSection variant="light">
+      <PageSection>
         <TextContent className="pf-v5-u-mr-sm">
           <Text component="h1">{t("realmNameTitle", { name: realm })}</Text>
         </TextContent>
       </PageSection>
-      <PageSection variant="light" className="pf-v5-u-p-0">
+      <PageSection className="pf-v5-u-p-0">
         <RoutableTabs
           data-testid="dashboard-tabs"
           defaultLocation={toDashboard({
@@ -163,7 +163,7 @@ const Dashboard = () => {
             title={<TabTitleText>{t("welcomeTabTitle")}</TabTitleText>}
             {...welcomeTab}
           >
-            <PageSection variant="light">
+            <PageSection>
               <div className="pf-v5-l-grid pf-v5-u-ml-lg">
                 <div className="pf-v5-l-grid__item pf-m-12-col">
                   <Title
@@ -229,7 +229,7 @@ const Dashboard = () => {
             title={<TabTitleText>{t("serverInfo")}</TabTitleText>}
             {...infoTab}
           >
-            <PageSection variant="light">
+            <PageSection>
               <Grid hasGutter>
                 <GridItem lg={2} sm={12}>
                   <Card className="keycloak__dashboard_card">

@@ -1,8 +1,6 @@
 import {
   ActionGroup,
   Button,
-  Chip,
-  ChipGroup,
   Divider,
   Flex,
   FlexItem,
@@ -17,6 +15,8 @@ import {
   Select,
   SelectOption,
   SelectVariant,
+  Chip,
+  ChipGroup,
 } from "@patternfly/react-core/deprecated";
 import { pickBy } from "lodash-es";
 import { useMemo, useState } from "react";

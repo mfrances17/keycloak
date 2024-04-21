@@ -169,7 +169,7 @@ export const AuthorizationPolicies = ({
   const noData = policies.length === 0;
   const searching = Object.keys(search).length !== 0;
   return (
-    <PageSection variant="light" className="pf-v5-u-p-0">
+    <PageSection className="pf-v5-u-p-0">
       <DeleteConfirm />
       {(!noData || searching) && (
         <>

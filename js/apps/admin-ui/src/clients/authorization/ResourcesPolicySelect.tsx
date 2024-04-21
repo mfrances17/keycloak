@@ -4,11 +4,13 @@ import type {
   Clients,
   PolicyQuery,
 } from "@keycloak/keycloak-admin-client/lib/resources/clients";
-import { Button, ButtonVariant, Chip, ChipGroup } from "@patternfly/react-core";
+import { Button, ButtonVariant } from "@patternfly/react-core";
 import {
   Select,
   SelectOption,
   SelectVariant,
+  Chip,
+  ChipGroup,
 } from "@patternfly/react-core/deprecated";
 import { useState } from "react";
 import {

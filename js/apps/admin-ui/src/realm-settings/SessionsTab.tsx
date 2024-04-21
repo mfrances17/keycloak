@@ -42,7 +42,7 @@ export const RealmSettingsSessionsTab = ({
   useEffect(setupForm, []);
 
   return (
-    <PageSection variant="light">
+    <PageSection>
       <FormPanel
         title={t("SSOSessionSettings")}
         className="kc-sso-session-template"

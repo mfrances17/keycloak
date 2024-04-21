@@ -124,9 +124,9 @@ export const PermissionsTab = ({ id, type }: PermissionsTabProps) => {
   }
 
   return (
-    <PageSection variant="light">
+    <PageSection>
       <DisableConfirm />
-      <Card isFlat>
+      <Card>
         <CardTitle>{t("permissions")}</CardTitle>
         <CardBody>
           {t(`${type}PermissionsHint`)}
@@ -165,7 +165,7 @@ export const PermissionsTab = ({ id, type }: PermissionsTabProps) => {
       </Card>
       {permission.enabled && (
         <>
-          <Card isFlat className="pf-v5-u-mt-lg">
+          <Card className="pf-v5-u-mt-lg">
             <CardTitle>{t("permissionsList")}</CardTitle>
             <CardBody>
               <Trans i18nKey="permissionsListIntro">
@@ -180,7 +180,7 @@ export const PermissionsTab = ({ id, type }: PermissionsTabProps) => {
               </Trans>
             </CardBody>
           </Card>
-          <Card isFlat className="keycloak__permission__permission-table">
+          <Card className="keycloak__permission__permission-table">
             <CardBody className="pf-v5-u-p-0">
               <Table aria-label={t("permissionsList")} variant="compact">
                 <Thead>

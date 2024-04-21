@@ -41,7 +41,7 @@ export const ClientSessions = ({ client }: ClientSessionsProps) => {
   };
 
   return (
-    <PageSection variant="light" className="pf-v5-u-p-0">
+    <PageSection className="pf-v5-u-p-0">
       <SessionsTable
         loader={loader}
         hiddenColumns={["clients"]}

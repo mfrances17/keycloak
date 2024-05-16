@@ -7,14 +7,15 @@ import {
   IFormatter,
   IRow,
   ITransform,
-  TableVariant,
-} from "@patternfly/react-table";
-import {
   Table,
-  TableBody,
-  TableHeader,
   TableProps,
-} from "@patternfly/react-table/deprecated";
+  TableVariant,
+  Tbody,
+  Thead,
+  Td,
+  Th,
+  Tr,
+} from "@patternfly/react-table";
 import { cloneDeep, differenceBy, get } from "lodash-es";
 import {
   ComponentClass,
@@ -70,14 +71,14 @@ type DataTableProps<T> = {
 function DataTable<T>({
   columns,
   rows,
-  actions,
-  actionResolver,
+  // actions,
+  // actionResolver,
   ariaLabelKey,
-  onSelect,
-  onCollapse,
-  canSelectAll,
+  // onSelect,
+  // onCollapse,
+  // canSelectAll,
   isNotCompact,
-  isRadio,
+  //isRadio,
   ...props
 }: DataTableProps<T>) {
   const { t } = useTranslation();
@@ -85,28 +86,50 @@ function DataTable<T>({
     <Table
       {...props}
       variant={isNotCompact ? undefined : TableVariant.compact}
-      onSelect={
-        onSelect
-          ? (_, isSelected, rowIndex) => onSelect(isSelected, rowIndex)
-          : undefined
-      }
-      onCollapse={
-        onCollapse
-          ? (_, rowIndex, isOpen) => onCollapse(isOpen, rowIndex)
-          : undefined
-      }
-      selectVariant={isRadio ? "radio" : "checkbox"}
-      canSelectAll={canSelectAll}
-      cells={columns.map((column) => {
-        return { ...column, title: t(column.displayKey || column.name) };
-      })}
-      rows={rows as IRow[]}
-      actions={actions}
-      actionResolver={actionResolver}
+      onSelect={undefined}
+      // onSelect={
+      //   onSelect
+      //     ? (_: any, isSelected: boolean, rowIndex: number) => onSelect(isSelected, rowIndex)
+      //     : undefined
+      // }
+      // onCollapse={
+      //   onCollapse
+      //     ? (_, rowIndex, isOpen) => onCollapse(isOpen, rowIndex)
+      //     : undefined
+      // }
+
+      // selectVariant={isRadio ? "radio" : "checkbox"}
+      // canSelectAll={canSelectAll}
+
+      // cells={columns.map((column) => {
+      //   return { ...column, title: t(column.displayKey || column.name) };
+      // })}
+
+      // rows={rows as IRow[]}
+
+      // actions={actions}
+
+      // actionResolver={actionResolver}
+
       aria-label={t(ariaLabelKey)}
     >
-      <TableHeader />
-      <TableBody />
+      <Thead>
+        <Tr>
+          {columns.map((column) => (
+            <Th key={column.displayKey} aria-label={t(ariaLabelKey)}>
+              {t(column.displayKey || column.name)}
+            </Th>
+          ))}
+        </Tr>
+      </Thead>
+      <Tbody>
+        {([rows] as IRow[]).map((row, index) => (
+          <Tr key={index}>
+            <Td>{row[index].data.name}</Td>
+            <Td>{row[index].data.providerId}</Td>
+          </Tr>
+        ))}
+      </Tbody>
     </Table>
   );
 }

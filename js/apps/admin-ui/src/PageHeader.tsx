@@ -5,9 +5,10 @@ import {
   DropdownItem,
   DropdownList,
   Masthead,
-  MastheadBrand,
+  MastheadLogo,
   MastheadContent,
   MastheadToggle,
+  MastheadBrand,
   MenuToggle,
   PageToggleButton,
   Toolbar,
@@ -162,20 +163,22 @@ export const Header = () => {
           <BarsIcon />
         </PageToggleButton>
       </MastheadToggle>
-      <MastheadBrand href={logoUrl}>
-        <img
-          src={environment.resourceUrl + logo}
-          id="masthead-logo"
-          alt={t("logo")}
-          aria-label={t("logo")}
-          className="keycloak__pageheader_brand"
-        />
+      <MastheadBrand data-codemods>
+        <MastheadLogo data-codemods href={logoUrl}>
+          <img
+            src={environment.resourceUrl + logo}
+            id="masthead-logo"
+            alt={t("logo")}
+            aria-label={t("logo")}
+            className="keycloak__pageheader_brand"
+          />
+        </MastheadLogo>
       </MastheadBrand>
       <MastheadContent>
         <Toolbar>
           <ToolbarContent>
             <ToolbarItem
-              align={{ default: "alignRight" }}
+              align={{ default: "alignEnd" }}
               visibility={{
                 default: "hidden",
                 md: "visible",
@@ -184,7 +187,7 @@ export const Header = () => {
               <HelpHeader />
             </ToolbarItem>
             <ToolbarItem
-              align={{ default: "alignLeft" }}
+              align={{ default: "alignStart" }}
               visibility={{
                 md: "hidden",
               }} /** this kebab dropdown replaces the icon buttons and is hidden for desktop sizes */
@@ -200,8 +203,7 @@ export const Header = () => {
               <UserDropdown />
             </ToolbarItem>
             <ToolbarItem
-              variant="overflow-menu"
-              align={{ default: "alignRight" }}
+              align={{ default: "alignEnd" }}
               className="pf-v5-u-m-0-on-lg"
             >
               <Avatar

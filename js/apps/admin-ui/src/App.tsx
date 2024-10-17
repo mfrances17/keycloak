@@ -61,7 +61,7 @@ export const App = () => {
       <AppContexts>
         <Banners />
         <Page
-          header={<Header />}
+          masthead={<Header />}
           isManagedSidebar
           sidebar={<PageNav />}
           breadcrumb={<PageBreadCrumbs />}

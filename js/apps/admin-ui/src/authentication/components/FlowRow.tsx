@@ -8,11 +8,11 @@ import {
   DataListItemCells,
   DataListItemRow,
   DataListToggle,
-  Draggable,
-  Text,
-  TextVariants,
+  Content,
+  ContentVariants,
   Tooltip,
 } from "@patternfly/react-core";
+import { Draggable } from "@patternfly/react-core/deprecated";
 import { TrashIcon } from "@patternfly/react-icons";
 import { useTranslation } from "react-i18next";
 import type { ExpandableExecution } from "../execution-model";
@@ -90,9 +90,9 @@ export const FlowRow = ({
                   {execution.authenticationFlow && (
                     <>
                       {execution.displayName} <br />{" "}
-                      <Text component={TextVariants.small}>
+                      <Content component={ContentVariants.small}>
                         {execution.alias} {execution.description}
-                      </Text>
+                      </Content>
                     </>
                   )}
                 </DataListCell>,
@@ -120,13 +120,12 @@ export const FlowRow = ({
                   {!builtIn && (
                     <Tooltip content={t("delete")}>
                       <Button
+                        icon={<TrashIcon />}
                         variant="plain"
                         data-testid={`${execution.displayName}-delete`}
                         aria-label={t("delete")}
                         onClick={() => onDelete(execution)}
-                      >
-                        <TrashIcon />
-                      </Button>
+                      />
                     </Tooltip>
                   )}
                 </DataListCell>,

@@ -20,7 +20,7 @@ export const TextComponent = ({
   return (
     <FormGroup
       label={t(label!)}
-      labelIcon={<HelpItem helpText={t(helpText!)} fieldLabelId={`${label}`} />}
+      labelHelp={<HelpItem helpText={t(helpText!)} fieldLabelId={`${label}`} />}
       fieldId={name!}
       required={required}
     >

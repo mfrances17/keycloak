@@ -6,19 +6,18 @@ import {
 } from "@keycloak/keycloak-ui-shared";
 import { CodeEditor, Language } from "@patternfly/react-code-editor";
 import {
+  Label,
+  LabelGroup,
   ActionGroup,
   Button,
-  Chip,
-  ChipGroup,
   DatePicker,
   Flex,
   FlexItem,
   Form,
   FormGroup,
-  Modal,
-  ModalVariant,
   SelectOption,
 } from "@patternfly/react-core";
+import { Modal, ModalVariant } from "@patternfly/react-core/deprecated";
 import {
   Table,
   TableVariant,
@@ -310,11 +309,12 @@ export const AdminEvents = () => {
                             isOpen={selectResourceTypesOpen}
                             aria-labelledby={"resourceTypes"}
                             chipGroupComponent={
-                              <ChipGroup>
+                              <LabelGroup>
                                 {field.value.map((chip) => (
-                                  <Chip
+                                  <Label
+                                    variant="outline"
                                     key={chip}
-                                    onClick={(resource) => {
+                                    onClose={(resource) => {
                                       resource.stopPropagation();
                                       field.onChange(
                                         field.value.filter(
@@ -324,9 +324,9 @@ export const AdminEvents = () => {
                                     }}
                                   >
                                     {chip}
-                                  </Chip>
+                                  </Label>
                                 ))}
-                              </ChipGroup>
+                              </LabelGroup>
                             }
                           >
                             {resourceTypes?.map((option) => (
@@ -375,11 +375,12 @@ export const AdminEvents = () => {
                             isOpen={selectOperationTypesOpen}
                             aria-labelledby={"operationTypes"}
                             chipGroupComponent={
-                              <ChipGroup>
+                              <LabelGroup>
                                 {field.value.map((chip) => (
-                                  <Chip
+                                  <Label
+                                    variant="outline"
                                     key={chip}
-                                    onClick={(operation) => {
+                                    onClose={(operation) => {
                                       operation.stopPropagation();
                                       field.onChange(
                                         field.value.filter(
@@ -389,9 +390,9 @@ export const AdminEvents = () => {
                                     }}
                                   >
                                     {chip}
-                                  </Chip>
+                                  </Label>
                                 ))}
-                              </ChipGroup>
+                              </LabelGroup>
                             }
                           >
                             {operationTypes?.map((option) => (
@@ -480,7 +481,7 @@ export const AdminEvents = () => {
                       ];
 
                       return (
-                        <ChipGroup
+                        <LabelGroup
                           className="pf-v5-u-mt-md pf-v5-u-mr-md"
                           key={key}
                           categoryName={filterLabels[key]}
@@ -488,18 +489,19 @@ export const AdminEvents = () => {
                           onClick={() => removeFilter(key)}
                         >
                           {typeof value === "string" ? (
-                            <Chip isReadOnly>{value}</Chip>
+                            <Label variant="outline">{value}</Label>
                           ) : (
                             value.map((entry) => (
-                              <Chip
+                              <Label
+                                variant="outline"
                                 key={entry}
-                                onClick={() => removeFilterValue(key, entry)}
+                                onClose={() => removeFilterValue(key, entry)}
                               >
                                 {entry}
-                              </Chip>
+                              </Label>
                             ))
                           )}
-                        </ChipGroup>
+                        </LabelGroup>
                       );
                     })}
                   </div>

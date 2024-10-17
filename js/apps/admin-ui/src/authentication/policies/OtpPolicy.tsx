@@ -1,15 +1,16 @@
 import type RealmRepresentation from "@keycloak/keycloak-admin-client/lib/defs/realmRepresentation";
 import {
+  Label,
+  LabelGroup,
   ActionGroup,
   AlertVariant,
   Button,
   ButtonVariant,
-  Chip,
-  ChipGroup,
   FormGroup,
   PageSection,
   Radio,
 } from "@patternfly/react-core";
+
 import { useEffect, useMemo } from "react";
 import { Controller, FormProvider, useForm, useWatch } from "react-hook-form";
 import { useTranslation } from "react-i18next";
@@ -90,7 +91,7 @@ export const OtpPolicy = ({ realm, realmUpdated }: OtpPolicyProps) => {
   };
 
   return (
-    <PageSection variant="light">
+    <PageSection hasBodyWrapper={false}>
       <FormAccess
         role="manage-realm"
         isHorizontal
@@ -100,7 +101,7 @@ export const OtpPolicy = ({ realm, realmUpdated }: OtpPolicyProps) => {
         <FormProvider {...form}>
           <FormGroup
             label={t("otpType")}
-            labelIcon={
+            labelHelp={
               <HelpItem helpText={t("otpTypeHelp")} fieldLabelId="otpType" />
             }
             hasNoPaddingTop
@@ -140,7 +141,7 @@ export const OtpPolicy = ({ realm, realmUpdated }: OtpPolicyProps) => {
           />
           <FormGroup
             label={t("otpPolicyDigits")}
-            labelIcon={
+            labelHelp={
               <HelpItem
                 helpText={t("otpPolicyDigitsHelp")}
                 fieldLabelId="otpPolicyDigits"
@@ -205,7 +206,7 @@ export const OtpPolicy = ({ realm, realmUpdated }: OtpPolicyProps) => {
           )}
           <FormGroup
             label={t("supportedApplications")}
-            labelIcon={
+            labelHelp={
               <HelpItem
                 helpText={t("supportedApplicationsHelp")}
                 fieldLabelId="supportedApplications"
@@ -213,13 +214,13 @@ export const OtpPolicy = ({ realm, realmUpdated }: OtpPolicyProps) => {
             }
           >
             <span data-testid="supportedApplications">
-              <ChipGroup>
+              <LabelGroup>
                 {supportedApplications.map((label) => (
-                  <Chip key={label} isReadOnly>
+                  <Label variant="outline" key={label}>
                     {label}
-                  </Chip>
+                  </Label>
                 ))}
-              </ChipGroup>
+              </LabelGroup>
             </span>
           </FormGroup>
 

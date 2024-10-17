@@ -10,12 +10,10 @@ import {
   Form,
   FormGroup,
   Label,
-  Modal,
-  ModalVariant,
-  Text,
-  TextContent,
-  TextVariants,
+  Content,
+  ContentVariants,
 } from "@patternfly/react-core";
+import { Modal, ModalVariant } from "@patternfly/react-core/deprecated";
 import { SearchIcon } from "@patternfly/react-icons";
 import { Table, Tbody, Td, Th, Thead, Tr } from "@patternfly/react-table";
 import { useEffect, useMemo, useState } from "react";
@@ -217,14 +215,14 @@ export const AddTranslationsDialog = ({
         spaceItems={{ default: "spaceItemsNone" }}
       >
         <FlexItem>
-          <TextContent>
-            <Text component={TextVariants.p}>
+          <Content>
+            <Content component={ContentVariants.p}>
               {type !== "displayHeader"
                 ? t("addTranslationsModalSubTitleDescription")
                 : t("addTranslationsModalSubTitle")}{" "}
               <strong>{t("addTranslationsModalSubTitleBolded")}</strong>
-            </Text>
-          </TextContent>
+            </Content>
+          </Content>
         </FlexItem>
         <FlexItem>
           <FormProvider {...form}>
@@ -241,14 +239,14 @@ export const AddTranslationsDialog = ({
                 isDisabled
               />
               <FlexItem>
-                <TextContent>
-                  <Text
+                <Content>
+                  <Content
                     className="pf-v5-u-font-size-sm pf-v5-u-font-weight-bold"
-                    component={TextVariants.p}
+                    component={ContentVariants.p}
                   >
                     {t("translationsTableHeading")}
-                  </Text>
-                </TextContent>
+                  </Content>
+                </Content>
                 <PaginatingTableToolbar
                   count={combinedLocales.length}
                   first={first}

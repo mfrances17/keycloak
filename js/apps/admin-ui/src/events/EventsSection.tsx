@@ -10,10 +10,10 @@ import {
   useFetch,
 } from "@keycloak/keycloak-ui-shared";
 import {
+  Label,
+  LabelGroup,
   ActionGroup,
   Button,
-  Chip,
-  ChipGroup,
   DatePicker,
   DescriptionList,
   DescriptionListDescription,
@@ -30,6 +30,7 @@ import {
   TabTitleText,
   Tooltip,
 } from "@patternfly/react-core";
+
 import { CheckCircleIcon, WarningTriangleIcon } from "@patternfly/react-icons";
 import { cellWidth } from "@patternfly/react-table";
 import { pickBy } from "lodash-es";
@@ -292,11 +293,12 @@ export default function EventsSection() {
                         isOpen={selectOpen}
                         aria-labelledby={"eventType"}
                         chipGroupComponent={
-                          <ChipGroup>
+                          <LabelGroup>
                             {field.value.map((chip) => (
-                              <Chip
+                              <Label
+                                variant="outline"
                                 key={chip}
-                                onClick={(event) => {
+                                onClose={(event) => {
                                   event.stopPropagation();
                                   field.onChange(
                                     field.value.filter((val) => val !== chip),
@@ -304,9 +306,9 @@ export default function EventsSection() {
                                 }}
                               >
                                 {t(`eventTypes.${chip}.name`)}
-                              </Chip>
+                              </Label>
                             ))}
-                          </ChipGroup>
+                          </LabelGroup>
                         }
                       >
                         {events?.enabledEventTypes?.map((option) => (
@@ -394,7 +396,7 @@ export default function EventsSection() {
                   ];
 
                   return (
-                    <ChipGroup
+                    <LabelGroup
                       className="pf-v5-u-mt-md pf-v5-u-mr-md"
                       key={key}
                       categoryName={filterLabels[key]}
@@ -402,18 +404,19 @@ export default function EventsSection() {
                       onClick={() => removeFilter(key)}
                     >
                       {typeof value === "string" ? (
-                        <Chip isReadOnly>{value}</Chip>
+                        <Label variant="outline">{value}</Label>
                       ) : (
                         value.map((entry) => (
-                          <Chip
+                          <Label
+                            variant="outline"
                             key={entry}
-                            onClick={() => removeFilterValue(key, entry)}
+                            onClose={() => removeFilterValue(key, entry)}
                           >
                             {t(`eventTypes.${entry}.name`)}
-                          </Chip>
+                          </Label>
                         ))
                       )}
-                    </ChipGroup>
+                    </LabelGroup>
                   );
                 })}
               </div>
@@ -441,7 +444,7 @@ export default function EventsSection() {
         helpUrl={helpUrls.eventsUrl}
         divider={false}
       />
-      <PageSection variant="light" className="pf-v5-u-p-0">
+      <PageSection hasBodyWrapper={false} className="pf-v5-u-p-0">
         <RoutableTabs
           isBox
           defaultLocation={toEvents({ realm, tab: "user-events" })}

@@ -53,7 +53,7 @@ export const ScopePicker = ({ clientId }: { clientId: string }) => {
   return (
     <FormGroup
       label={t("authorizationScopes")}
-      labelIcon={
+      labelHelp={
         <HelpItem helpText={t("clientScopesHelp")} fieldLabelId="scopes" />
       }
       fieldId="scopes"

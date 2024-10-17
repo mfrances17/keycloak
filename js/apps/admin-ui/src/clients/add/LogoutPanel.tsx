@@ -38,7 +38,7 @@ export const LogoutPanel = ({
     >
       <FormGroup
         label={t("frontchannelLogout")}
-        labelIcon={
+        labelHelp={
           <HelpItem
             helpText={t("frontchannelLogoutHelp")}
             fieldLabelId="frontchannelLogout"
@@ -55,7 +55,6 @@ export const LogoutPanel = ({
             <Switch
               id="kc-frontchannelLogout-switch"
               label={t("on")}
-              labelOff={t("off")}
               isChecked={field.value}
               onChange={field.onChange}
               aria-label={t("frontchannelLogout")}
@@ -95,7 +94,7 @@ export const LogoutPanel = ({
           />
           <FormGroup
             label={t("backchannelLogoutSessionRequired")}
-            labelIcon={
+            labelHelp={
               <HelpItem
                 helpText={t("backchannelLogoutSessionRequiredHelp")}
                 fieldLabelId="backchannelLogoutSessionRequired"
@@ -114,7 +113,6 @@ export const LogoutPanel = ({
                 <Switch
                   id="backchannelLogoutSessionRequired"
                   label={t("on")}
-                  labelOff={t("off")}
                   isChecked={field.value === "true"}
                   onChange={(_event, value) => field.onChange(value.toString())}
                   aria-label={t("backchannelLogoutSessionRequired")}
@@ -124,7 +122,7 @@ export const LogoutPanel = ({
           </FormGroup>
           <FormGroup
             label={t("backchannelLogoutRevokeOfflineSessions")}
-            labelIcon={
+            labelHelp={
               <HelpItem
                 helpText={t("backchannelLogoutRevokeOfflineSessionsHelp")}
                 fieldLabelId="backchannelLogoutRevokeOfflineSessions"
@@ -143,7 +141,6 @@ export const LogoutPanel = ({
                 <Switch
                   id="backchannelLogoutRevokeOfflineSessions"
                   label={t("on")}
-                  labelOff={t("off")}
                   isChecked={field.value === "true"}
                   onChange={(_event, value) => field.onChange(value.toString())}
                   aria-label={t("backchannelLogoutRevokeOfflineSessions")}

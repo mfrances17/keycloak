@@ -17,7 +17,7 @@ export const ErrorRenderer = ({ error }: FallbackProps) => {
   };
 
   return (
-    <PageSection>
+    <PageSection hasBodyWrapper={false}>
       <Alert
         isInline
         variant={AlertVariant.danger}

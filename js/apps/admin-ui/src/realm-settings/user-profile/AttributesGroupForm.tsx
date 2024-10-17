@@ -13,8 +13,7 @@ import {
   Grid,
   GridItem,
   PageSection,
-  Text,
-  TextContent,
+  Content,
   TextInput,
 } from "@patternfly/react-core";
 import { GlobeRouteIcon } from "@patternfly/react-icons";
@@ -458,7 +457,10 @@ export default function AttributesGroupForm() {
         titleKey={matchingGroup ? "editGroupText" : "createGroupText"}
         divider
       />
-      <PageSection variant="light" onSubmit={form.handleSubmit(onSubmit)}>
+      <PageSection
+        hasBodyWrapper={false}
+        onSubmit={form.handleSubmit(onSubmit)}
+      >
         <FormAccess isHorizontal role="manage-realm">
           <FormProvider {...form}>
             <TextControl
@@ -481,7 +483,7 @@ export default function AttributesGroupForm() {
             )}
             <FormGroup
               label={t("displayHeaderField")}
-              labelIcon={
+              labelHelp={
                 <HelpItem
                   helpText={t("displayHeaderHintHelp")}
                   fieldLabelId="displayHeaderField"
@@ -538,7 +540,7 @@ export default function AttributesGroupForm() {
             </FormGroup>
             <FormGroup
               label={t("displayDescriptionField")}
-              labelIcon={
+              labelHelp={
                 <HelpItem
                   helpText={t("displayDescriptionHintHelp")}
                   fieldLabelId="displayDescriptionField"
@@ -595,9 +597,9 @@ export default function AttributesGroupForm() {
                 )}
               </Grid>
             </FormGroup>
-            <TextContent>
-              <Text component="h2">{t("annotationsText")}</Text>
-            </TextContent>
+            <Content>
+              <Content component="h2">{t("annotationsText")}</Content>
+            </Content>
             <FormGroup label={t("annotationsText")} fieldId="kc-annotations">
               <KeyValueInput label={t("annotationsText")} name="annotations" />
             </FormGroup>

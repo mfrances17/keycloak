@@ -43,7 +43,7 @@ export const RealmSettingsThemesTab = ({
   useEffect(setupForm, []);
 
   return (
-    <PageSection variant="light">
+    <PageSection hasBodyWrapper={false}>
       <FormAccess
         isHorizontal
         role="manage-realm"
@@ -53,7 +53,7 @@ export const RealmSettingsThemesTab = ({
         <FormGroup
           label={t("loginTheme")}
           fieldId="kc-login-theme"
-          labelIcon={
+          labelHelp={
             <HelpItem
               helpText={t("loginThemeHelp")}
               fieldLabelId="loginTheme"
@@ -95,7 +95,7 @@ export const RealmSettingsThemesTab = ({
         <FormGroup
           label={t("accountTheme")}
           fieldId="kc-account-theme"
-          labelIcon={
+          labelHelp={
             <HelpItem
               helpText={t("accountThemeHelp")}
               fieldLabelId="accountTheme"
@@ -139,7 +139,7 @@ export const RealmSettingsThemesTab = ({
         <FormGroup
           label={t("adminTheme")}
           fieldId="kc-admin-ui-theme"
-          labelIcon={
+          labelHelp={
             <HelpItem
               helpText={t("adminThemeHelp")}
               fieldLabelId="adminTheme"
@@ -183,7 +183,7 @@ export const RealmSettingsThemesTab = ({
         <FormGroup
           label={t("emailTheme")}
           fieldId="kc-email-theme"
-          labelIcon={
+          labelHelp={
             <HelpItem
               helpText={t("emailThemeHelp")}
               fieldLabelId="emailTheme"

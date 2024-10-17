@@ -196,7 +196,7 @@ export default function MappingDetails() {
             : undefined
         }
       />
-      <PageSection variant="light">
+      <PageSection hasBodyWrapper={false}>
         <FormProvider {...form}>
           <FormAccess
             isHorizontal

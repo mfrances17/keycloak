@@ -12,7 +12,7 @@ export const JavaScript = () => {
   return (
     <FormGroup
       label={t("code")}
-      labelIcon={
+      labelHelp={
         <HelpItem helpText={t("policyCodeHelp")} fieldLabelId="code" />
       }
       fieldId="code"

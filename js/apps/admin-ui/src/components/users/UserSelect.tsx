@@ -6,9 +6,9 @@ import {
   useFetch,
 } from "@keycloak/keycloak-ui-shared";
 import {
+  Label,
+  LabelGroup,
   Button,
-  Chip,
-  ChipGroup,
   FormGroup,
   MenuToggle,
   Select,
@@ -18,6 +18,7 @@ import {
   TextInputGroupMain,
   TextInputGroupUtilities,
 } from "@patternfly/react-core";
+
 import { TimesIcon } from "@patternfly/react-icons";
 import { debounce } from "lodash-es";
 import { useCallback, useRef, useState } from "react";
@@ -98,7 +99,7 @@ export const UserSelect = ({
     <FormGroup
       label={t(label!)}
       isRequired={isRequired}
-      labelIcon={<HelpItem helpText={helpText!} fieldLabelId={label!} />}
+      labelHelp={<HelpItem helpText={helpText!} fieldLabelId={label!} />}
       fieldId={name!}
     >
       <Controller
@@ -145,12 +146,13 @@ export const UserSelect = ({
                   >
                     {variant === "typeaheadMulti" &&
                       Array.isArray(field.value) && (
-                        <ChipGroup aria-label="Current selections">
+                        <LabelGroup aria-label="Current selections">
                           {field.value.map(
                             (selection: string, index: number) => (
-                              <Chip
+                              <Label
+                                variant="outline"
                                 key={index}
-                                onClick={(ev) => {
+                                onClose={(ev) => {
                                   ev.stopPropagation();
                                   field.onChange(
                                     field.value.filter(
@@ -163,15 +165,16 @@ export const UserSelect = ({
                                   users.find((u) => u?.id === selection)
                                     ?.username
                                 }
-                              </Chip>
+                              </Label>
                             ),
                           )}
-                        </ChipGroup>
+                        </LabelGroup>
                       )}
                   </TextInputGroupMain>
                   <TextInputGroupUtilities>
                     {!!search && (
                       <Button
+                        icon={<TimesIcon aria-hidden />}
                         variant="plain"
                         onClick={() => {
                           setInputValue("");
@@ -180,9 +183,7 @@ export const UserSelect = ({
                           textInputRef?.current?.focus();
                         }}
                         aria-label="Clear input value"
-                      >
-                        <TimesIcon aria-hidden />
-                      </Button>
+                      />
                     )}
                   </TextInputGroupUtilities>
                 </TextInputGroup>

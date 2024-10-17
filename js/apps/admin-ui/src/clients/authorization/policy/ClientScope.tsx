@@ -56,7 +56,7 @@ export const ClientScope = () => {
   return (
     <FormGroup
       label={t("clientScopes")}
-      labelIcon={
+      labelHelp={
         <HelpItem
           helpText={t("clientsClientScopesHelp")}
           fieldLabelId="clientScopes"

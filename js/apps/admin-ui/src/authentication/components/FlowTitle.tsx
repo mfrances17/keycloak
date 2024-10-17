@@ -1,4 +1,9 @@
-import { Card, CardBody, Text, TextVariants } from "@patternfly/react-core";
+import {
+  Card,
+  CardBody,
+  Content,
+  ContentVariants,
+} from "@patternfly/react-core";
 
 import "./flow-title.css";
 
@@ -10,14 +15,10 @@ type FlowTitleProps = {
 
 export const FlowTitle = ({ id, title, alias }: FlowTitleProps) => {
   return (
-    <Card
-      data-testid={title}
-      className="keycloak__authentication__title"
-      isFlat
-    >
+    <Card data-testid={title} className="keycloak__authentication__title">
       <CardBody data-id={id} id={`title-id-${id}`}>
         {title} <br />
-        <Text component={TextVariants.small}>{alias}</Text>
+        <Content component={ContentVariants.small}>{alias}</Content>
       </CardBody>
     </Card>
   );

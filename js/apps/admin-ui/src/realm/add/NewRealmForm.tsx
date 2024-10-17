@@ -54,7 +54,7 @@ export default function NewRealmForm() {
   return (
     <>
       <ViewHeader titleKey="createRealm" subKey="realmExplain" />
-      <PageSection variant="light">
+      <PageSection hasBodyWrapper={false}>
         <FormProvider {...form}>
           <FormAccess
             isHorizontal

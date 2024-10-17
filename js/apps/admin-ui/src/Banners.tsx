@@ -11,7 +11,7 @@ const WarnBanner = ({ msg }: WarnBannerProps) => {
   const { t } = useTranslation();
 
   return (
-    <Banner screenReaderText={t(msg)} variant="gold" isSticky>
+    <Banner screenReaderText={t(msg)} color="yellow" isSticky>
       <Flex
         spaceItems={{ default: "spaceItemsSm" }}
         flexWrap={{ default: "wrap" }}

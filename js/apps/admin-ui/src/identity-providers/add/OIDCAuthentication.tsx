@@ -37,7 +37,7 @@ export const OIDCAuthentication = ({ create = true }: { create?: boolean }) => {
     <>
       <FormGroup
         label={t("clientAuthentication")}
-        labelIcon={
+        labelHelp={
           <HelpItem
             helpText={t("clientAuthenticationHelp")}
             fieldLabelId="clientAuthentication"
@@ -81,7 +81,7 @@ export const OIDCAuthentication = ({ create = true }: { create?: boolean }) => {
       />
       <FormGroup
         label={t("clientAssertionSigningAlg")}
-        labelIcon={
+        labelHelp={
           <HelpItem
             helpText={t("clientAssertionSigningAlgHelp")}
             fieldLabelId="clientAssertionSigningAlg"

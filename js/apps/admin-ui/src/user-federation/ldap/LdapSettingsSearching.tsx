@@ -123,7 +123,7 @@ export const LdapSettingsSearching = ({
         />
         <FormGroup
           label={t("pagination")}
-          labelIcon={
+          labelHelp={
             <HelpItem
               helpText={t("paginationHelp")}
               fieldLabelId="pagination"
@@ -144,7 +144,6 @@ export const LdapSettingsSearching = ({
                 onChange={(_event, value) => field.onChange([`${value}`])}
                 isChecked={field.value[0] === "true"}
                 label={t("on")}
-                labelOff={t("off")}
                 aria-label={t("pagination")}
               />
             )}

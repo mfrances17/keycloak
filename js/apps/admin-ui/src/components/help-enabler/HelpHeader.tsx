@@ -7,7 +7,7 @@ import {
   Split,
   SplitItem,
   Switch,
-  TextContent,
+  Content,
 } from "@patternfly/react-core";
 import { ExternalLinkAltIcon, HelpIcon } from "@patternfly/react-icons";
 import { useState } from "react";
@@ -52,9 +52,9 @@ export const HelpHeader = () => {
           />
         </SplitItem>
       </Split>
-      <TextContent className="keycloak_help-header-description">
+      <Content className="keycloak_help-header-description">
         {t("helpToggleInfo")}
-      </TextContent>
+      </Content>
     </DropdownItem>,
   ];
   return (

@@ -35,7 +35,7 @@ export const JsonEditorTab = () => {
   }
 
   return (
-    <PageSection variant="light">
+    <PageSection hasBodyWrapper={false}>
       <CodeEditor
         language={Language.json}
         height="30rem"

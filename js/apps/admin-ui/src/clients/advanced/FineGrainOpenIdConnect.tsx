@@ -189,7 +189,7 @@ export const FineGrainOpenIdConnect = ({
       <FormGroup
         label={t("validRequestURIs")}
         fieldId="validRequestURIs"
-        labelIcon={
+        labelHelp={
           <HelpItem
             helpText={t("validRequestURIsHelp")}
             fieldLabelId="validRequestURIs"

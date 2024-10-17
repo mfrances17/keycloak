@@ -7,9 +7,7 @@ import {
   Button,
   ButtonVariant,
   DataList,
-  DragDrop,
   DropdownItem,
-  Droppable,
   Label,
   PageSection,
   ToggleGroup,
@@ -18,6 +16,7 @@ import {
   ToolbarContent,
   ToolbarItem,
 } from "@patternfly/react-core";
+import { DragDrop, Droppable } from "@patternfly/react-core/deprecated";
 import { DomainIcon, TableIcon } from "@patternfly/react-icons";
 import { useState } from "react";
 import { Trans, useTranslation } from "react-i18next";
@@ -357,7 +356,7 @@ export default function FlowDetails() {
         ]}
         dropdownItems={dropdownItems}
       />
-      <PageSection variant="light">
+      <PageSection hasBodyWrapper={false}>
         {executionList && hasExecutions && (
           <>
             <Toolbar id="toolbar">
